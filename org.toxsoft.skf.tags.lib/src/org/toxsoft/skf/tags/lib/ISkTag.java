@@ -4,6 +4,8 @@ import org.toxsoft.core.tslib.av.metainfo.*;
 import org.toxsoft.core.tslib.av.opset.*;
 import org.toxsoft.core.tslib.bricks.strid.*;
 import org.toxsoft.core.tslib.bricks.strid.coll.*;
+import org.toxsoft.core.tslib.gw.gwid.*;
+import org.toxsoft.core.tslib.utils.errors.*;
 
 /**
  * The tag.
@@ -12,6 +14,24 @@ import org.toxsoft.core.tslib.bricks.strid.coll.*;
  */
 public interface ISkTag
     extends IStridableParameterized {
+
+  /**
+   * Set the marks on the specified GWIDs.
+   *
+   * @param aGwids {@link IGwidList} - the list of GWIDs
+   * @throws TsNullArgumentRtException any argument = <code>null</code>
+   * @throws TsUnsupportedFeatureRtException this is {@link #isUnmarkable()} tag
+   */
+  void markGwids( IGwidList aGwids );
+
+  /**
+   * Returns the marked GWIDs.
+   * <p>
+   * For unmarkable tag returns an empty list.
+   *
+   * @return {@link IGwidList} - the marked GWIDs
+   */
+  IGwidList getMarkedGwids();
 
   /**
    * Returns the local ID, an IDname.
