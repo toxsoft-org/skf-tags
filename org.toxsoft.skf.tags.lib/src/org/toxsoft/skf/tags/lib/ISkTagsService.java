@@ -5,6 +5,8 @@ import org.toxsoft.core.tslib.bricks.events.*;
 import org.toxsoft.core.tslib.bricks.strid.coll.*;
 import org.toxsoft.core.tslib.bricks.validator.*;
 import org.toxsoft.core.tslib.bricks.validator.impl.*;
+import org.toxsoft.core.tslib.coll.primtypes.*;
+import org.toxsoft.core.tslib.gw.gwid.*;
 import org.toxsoft.core.tslib.utils.errors.*;
 import org.toxsoft.uskat.core.*;
 import org.toxsoft.uskat.core.api.*;
@@ -25,6 +27,14 @@ public interface ISkTagsService
    * The service ID.
    */
   String SERVICE_ID = ISkHardConstants.SK_SYSEXT_SERVICE_ID_PREFIX + ".Tags"; //$NON-NLS-1$
+
+  /**
+   * Returns the IDs of the tags that marks the specified GWID.
+   *
+   * @param aGwid {@link Gwid} - the asked GWID
+   * @return {@link IStringList} - IDs of the marking tags
+   */
+  IStringList getMarkTagIds( Gwid aGwid );
 
   /**
    * Returns the root tags.
