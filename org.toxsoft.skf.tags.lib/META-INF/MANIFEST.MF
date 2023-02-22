@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: USkat package: Tags. SkService library
+Bundle-SymbolicName: org.toxsoft.skf.tags.lib
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: org.toxsoft.skf.tags.lib
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-Vendor: toxsoft.org
+Require-Bundle: org.toxsoft.core.tslib;bundle-version="1.0.0",
+ org.toxsoft.uskat.core;bundle-version="1.0.0"
