@@ -1,4 +1,4 @@
-package org.toxsoft.skf.tags.lib;
+package org.toxsoft.skf.tags.lib_old;
 
 import org.toxsoft.core.tslib.coll.basis.*;
 

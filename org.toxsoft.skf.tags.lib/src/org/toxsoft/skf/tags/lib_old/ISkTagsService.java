@@ -1,4 +1,4 @@
-package org.toxsoft.skf.tags.lib;
+package org.toxsoft.skf.tags.lib_old;
 
 import org.toxsoft.core.tslib.av.opset.*;
 import org.toxsoft.core.tslib.bricks.events.*;
@@ -92,18 +92,18 @@ public interface ISkTagsService
   ISkTag createRootTag( String aRootId, String aName, String aDescription, boolean aUnmarkable, IOptionSet aParams );
 
   /**
-   * Edits the tag.
+   * Changes the tag ID.
+   * <p>
+   * Changing tag ID means to change tags tree structure, event move the tag from one root hierarchy to another.
    *
    * @param <T> - editeg tag type, may be {@link ISkTag} or {@link ISkRootTag}
    * @param aFullId String - the tag full ID
-   * @param aName String - new name
-   * @param aDescription String - new description
-   * @param aParams {@link IOptionSet} - values oth {@link ISkTag#params()}
+   * @param aNewFullId String - new ID for thye tag
    * @return {@link ISkTag} - edited tags
    * @throws TsNullArgumentRtException any argument = <code>null</code>
    * @throws TsValidationFailedRtException validation failed
    */
-  <T extends ISkTag> T editTag( String aFullId, String aName, String aDescription, IOptionSet aParams );
+  <T extends ISkTag> T editTagId( String aFullId, String aNewFullId );
 
   /**
    * Removes the tag with the childs (if any).
