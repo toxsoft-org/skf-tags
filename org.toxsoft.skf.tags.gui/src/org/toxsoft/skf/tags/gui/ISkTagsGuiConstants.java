@@ -18,10 +18,10 @@ public interface ISkTagsGuiConstants {
   // ------------------------------------------------------------------------------------
   // Icons
 
-  String PREFIX_OF_ICONID_FIELD_NAME = "ICONID_";    //$NON-NLS-1$
-  String ICONID_TAG                  = "legenda_on"; //$NON-NLS-1$
-  String ICONID_GROUP                = "users-list"; //$NON-NLS-1$
-  String ICONID_SECTION              = "users-list"; //$NON-NLS-1$
+  String PREFIX_OF_ICONID_FIELD_NAME = "ICONID_";   //$NON-NLS-1$
+  String ICONID_TAG                  = "yarlik";    //$NON-NLS-1$
+  String ICONID_GROUP                = "yarlik-ok"; //$NON-NLS-1$
+  String ICONID_SECTION              = "plant";     //$NON-NLS-1$
 
   // ------------------------------------------------------------------------------------
   // Actions

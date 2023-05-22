@@ -25,13 +25,21 @@ public interface ISkTagsGuiSharedResources {
   String STR_D_IS_UNMARKABLE   = Messages.STR_D_IS_UNMARKABLE;
   String STR_N_LOCAL_ID        = Messages.STR_N_LOCAL_ID;
   String STR_D_LOCAL_ID        = Messages.STR_D_LOCAL_ID;
+  String STR_N_TAG_KIND        = "тип ярлыка";
+  String STR_D_TAG_KIND        = "тип ярлыка";
 
   /**
-   * {@link SkTagM5Model }
+   * {@link GwidM5Model }
+   */
+  String STR_N_GWID     = "Gwid";
+  String STR_D_GWID     = "Gwid";
+  String STR_N_M5M_GWID = "m5 модель ярлыка";
+  String STR_D_M5M_GWID = "m5 модель ярлыка";
+
+  /**
+   * {@link GwidM5Model }
    */
   String STR_N_CREATE_FOLDER = "папка ярлыков";
   String STR_D_CREATE_FOLDER = "Создать папку для ярлыков";
-  String STR_N_TAG_KIND      = "тип ярлыка";
-  String STR_D_TAG_KIND      = "Тип ярлыка";
 
 }

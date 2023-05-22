@@ -49,7 +49,7 @@ public class SkTagM5Model
    * объектами в том что по связи объекты хранятся отдельно от сущности.
    */
   public final IM5MultiModownFieldDef<ISkTag, Gwid> MARKED_GWIDS =
-      new M5MultiModownFieldDef<>( FID_MARKED_GWIDS, Gwid.STR_MULTI_ID ) {
+      new M5MultiModownFieldDef<>( FID_MARKED_GWIDS, GwidM5Model.MODEL_ID ) {
 
         @Override
         protected void doInit() {
