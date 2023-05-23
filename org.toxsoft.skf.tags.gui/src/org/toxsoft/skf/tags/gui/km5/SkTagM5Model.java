@@ -8,6 +8,10 @@ import static org.toxsoft.skf.tags.gui.ISkTagsGuiSharedResources.*;
 import static org.toxsoft.uskat.core.ISkHardConstants.*;
 import static org.toxsoft.uskat.core.gui.km5.ISkKm5SharedResources.*;
 
+import org.toxsoft.core.tsgui.bricks.ctx.*;
+import org.toxsoft.core.tsgui.m5.gui.mpc.impl.*;
+import org.toxsoft.core.tsgui.m5.gui.panels.*;
+import org.toxsoft.core.tsgui.m5.gui.panels.impl.*;
 import org.toxsoft.core.tsgui.m5.model.*;
 import org.toxsoft.core.tsgui.m5.model.impl.*;
 import org.toxsoft.core.tslib.av.*;
@@ -266,6 +270,17 @@ public class SkTagM5Model
 
     // add fields
     addFieldDefs( TAG_ID, NAME, DESCRIPTION, MARKED_GWIDS, SECTION, ROOT, PARENT );
+    // panels creator
+    setPanelCreator( new M5DefaultPanelCreator<>() {
+
+      protected IM5CollectionPanel<ISkTag> doCreateCollEditPanel( ITsGuiContext aContext,
+          IM5ItemsProvider<ISkTag> aItemsProvider, IM5LifecycleManager<ISkTag> aLifecycleManager ) {
+        MultiPaneComponentModown<ISkTag> mpc =
+            new SkTagPaneComponentModown( aContext, model(), aItemsProvider, aLifecycleManager );
+        return new M5CollectionPanelMpcModownWrapper<>( mpc, false );
+      }
+    } );
+
   }
 
   @Override

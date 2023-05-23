@@ -21,6 +21,7 @@ public class KM5TagsContributor
   public static final IKM5ContributorCreator CREATOR = KM5TagsContributor::new;
 
   private static final IStringList CONRTIBUTED_MODEL_IDS = new StringArrayList( //
+      SkTagSectionM5Model.MODEL_ID, //
       SkTagM5Model.MODEL_ID //
   );
 
@@ -37,7 +38,7 @@ public class KM5TagsContributor
 
   @Override
   protected IStringList papiCreateModels() {
-    // m5().addModel( new VtRootTagM5Model( skConn() ) );
+    m5().addModel( new SkTagSectionM5Model( skConn() ) );
     m5().addModel( new SkTagM5Model( skConn() ) );
 
     return CONRTIBUTED_MODEL_IDS;

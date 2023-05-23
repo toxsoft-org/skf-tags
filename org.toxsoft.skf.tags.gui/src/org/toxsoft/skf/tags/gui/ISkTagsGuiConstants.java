@@ -31,6 +31,16 @@ public interface ISkTagsGuiConstants {
   TsActionDef ACDEF_CREATE_FOLDER = TsActionDef.ofPush2( ACTID_CREATE_FOLDER, //
       STR_N_CREATE_FOLDER, STR_D_CREATE_FOLDER, ICONID_SECTION );
 
+  String ACTID_COPY_TAG = SK_ID + ".tags.gui.copy.tag"; //$NON-NLS-1$
+
+  TsActionDef ACDEF_COPY_TAG = TsActionDef.ofPush2( ACTID_CREATE_FOLDER, //
+      STR_N_COPY_TAG, STR_D_COPY_TAG, ITsStdIconIds.ICONID_EDIT_COPY );
+
+  String ACTID_SELECT_MULTY_GWIDS = SK_ID + ".tags.gui.select.gwids"; //$NON-NLS-1$
+
+  TsActionDef ACDEF_SELECT_MULTY_GWIDS = TsActionDef.ofPush2( ACTID_SELECT_MULTY_GWIDS, //
+      STR_N_SELECT_MULTY_GWIDS, STR_D_SELECT_MULTY_GWIDS, ITsStdIconIds.ICONID_ITEMS_CHECK_ALL );
+
   /**
    * Constants registration.
    *

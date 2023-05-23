@@ -30,7 +30,7 @@ public class GwidM5Model
   public static final String FID_GWID = "Gwid"; //$NON-NLS-1$
 
   /**
-   * Field {@link String#toString()}.
+   * Field {@link Gwid#asString()}.
    */
   public final M5AttributeFieldDef<Gwid> GWID = new M5AttributeFieldDef<>( FID_GWID, DDEF_VALOBJ ) {
 

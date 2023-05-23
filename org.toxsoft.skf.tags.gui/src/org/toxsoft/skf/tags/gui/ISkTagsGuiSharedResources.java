@@ -42,4 +42,20 @@ public interface ISkTagsGuiSharedResources {
   String STR_N_CREATE_FOLDER = "папка ярлыков";
   String STR_D_CREATE_FOLDER = "Создать папку для ярлыков";
 
+  /**
+   * {@link SkTagPaneComponentModown}
+   */
+  String STR_N_COPY_TAG           = "copy";
+  String STR_D_COPY_TAG           = "Copy tag";
+  String STR_N_SELECT_MULTY_GWIDS = "Gwid list";
+  String STR_D_SELECT_MULTY_GWIDS = "Select list of Gwids";
+
+  /**
+   * {@link SkTagSectionM5Model }
+   */
+  String STR_N_TAG_SECTION = "section";
+  String STR_D_TAG_SECTION = "Section of tags";
+  String STR_N_SECTION_ID  = "section id";
+  String STR_D_SECTION_ID  = "section id";
+
 }
