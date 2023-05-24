@@ -30,13 +30,13 @@ public class TagsTreeMaker
   /**
    * узел группа
    */
-  final ITsNodeKind<ISkTag> nK_TAG_GROUP = new TsNodeKind<>( "TagGroupNode", ISkTag.class, true, ICONID_GROUP ); //$NON-NLS-1$
+  final ITsNodeKind<ISkTag> nK_TAG_GROUP = new TsNodeKind<>( "TagGroupNode", ISkTag.class, true, ICONID_TAG_OK ); //$NON-NLS-1$
 
   /**
    * узел секция
    */
   final ITsNodeKind<ISkTagSection> nK_SECTION =
-      new TsNodeKind<>( "TagSectionNode", ISkTagSection.class, true, ICONID_SECTION ); //$NON-NLS-1$
+      new TsNodeKind<>( "TagSectionNode", ISkTagSection.class, true, ICONID_TAG_PLANT ); //$NON-NLS-1$
 
   private final ISkTagService                         tagService;
   private final IStringMapEdit<DefaultTsNode<ISkTag>> allNodes = new StringMap<>();

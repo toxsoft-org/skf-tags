@@ -20,8 +20,8 @@ public interface ISkTagsGuiConstants {
 
   String PREFIX_OF_ICONID_FIELD_NAME = "ICONID_";   //$NON-NLS-1$
   String ICONID_TAG                  = "yarlik";    //$NON-NLS-1$
-  String ICONID_GROUP                = "yarlik-ok"; //$NON-NLS-1$
-  String ICONID_SECTION              = "plant";     //$NON-NLS-1$
+  String ICONID_TAG_OK               = "yarlik-ok"; //$NON-NLS-1$
+  String ICONID_TAG_PLANT            = "plant";     //$NON-NLS-1$
 
   // ------------------------------------------------------------------------------------
   // Actions
@@ -29,7 +29,7 @@ public interface ISkTagsGuiConstants {
   String ACTID_CREATE_FOLDER = SK_ID + ".tags.gui.create.section"; //$NON-NLS-1$
 
   TsActionDef ACDEF_CREATE_FOLDER = TsActionDef.ofPush2( ACTID_CREATE_FOLDER, //
-      STR_N_CREATE_FOLDER, STR_D_CREATE_FOLDER, ICONID_SECTION );
+      STR_N_CREATE_FOLDER, STR_D_CREATE_FOLDER, ICONID_TAG_PLANT );
 
   String ACTID_COPY_TAG = SK_ID + ".tags.gui.copy.tag"; //$NON-NLS-1$
 

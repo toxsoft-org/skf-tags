@@ -35,7 +35,7 @@ class SkideUnitPanelTagsEditor
     tiTagsEditor.setControl( panelTagsEditor.createControl( tabFolder ) );
     tiTagsEditor.setText( "Ярлыки" );
     tiTagsEditor.setToolTipText( "Редактор ярлыков" );
-    tiTagsEditor.setImage( iconManager().loadStdIcon( ISkTagsGuiConstants.ICONID_SECTION, tabIconSize ) );
+    tiTagsEditor.setImage( iconManager().loadStdIcon( ISkTagsGuiConstants.ICONID_TAG_PLANT, tabIconSize ) );
     return backPanel;
   }
 

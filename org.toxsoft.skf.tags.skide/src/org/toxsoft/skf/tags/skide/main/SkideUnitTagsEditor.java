@@ -29,7 +29,7 @@ public class SkideUnitTagsEditor
     super( UNIT_ID, OptionSetUtils.createOpSet( //
         TSID_NAME, STR_SKIDE_TAGS_EDITOR, //
         TSID_DESCRIPTION, STR_SKIDE_TAGS_EDITOR_D, //
-        TSID_ICON_ID, ISkTagsGuiConstants.ICONID_GROUP //
+        TSID_ICON_ID, ISkTagsGuiConstants.ICONID_TAG_PLANT //
     ), aContext, aCreator );
     unitActions().add( ACDEF_ABOUT );
   }

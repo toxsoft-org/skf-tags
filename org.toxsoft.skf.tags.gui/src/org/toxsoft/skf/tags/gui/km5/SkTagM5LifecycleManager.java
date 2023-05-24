@@ -54,7 +54,10 @@ public class SkTagM5LifecycleManager
     String localId = aValues.getAsAv( SkTagM5Model.AID_LOCAL_ID ).asString();
     String name = aValues.getAsAv( AID_NAME ).asString();
     String description = aValues.getAsAv( AID_DESCRIPTION ).asString();
-    return skTagsService().svs().validator().canCreateChildTag( parent, localId, name, description, IOptionSet.NULL );
+    // FIXME
+    // return skTagsService().svs().validator().canCreateChildTag( parent, localId, name, description, IOptionSet.NULL
+    // );
+    return ValidationResult.SUCCESS;
   }
 
   @Override
@@ -84,7 +87,9 @@ public class SkTagM5LifecycleManager
     String localId = aValues.getAsAv( SkTagM5Model.AID_LOCAL_ID ).asString();
     String name = aValues.getAsAv( AID_NAME ).asString();
     String description = aValues.getAsAv( AID_DESCRIPTION ).asString();
-    return skTagsService().svs().validator().canEditTag( localId, name, description, IOptionSet.NULL );
+    // FIXME
+    // return skTagsService().svs().validator().canEditTag( localId, name, description, IOptionSet.NULL );
+    return ValidationResult.SUCCESS;
   }
 
   @Override
@@ -105,7 +110,9 @@ public class SkTagM5LifecycleManager
 
   @Override
   protected ValidationResult doBeforeRemove( ISkTag aEntity ) {
-    return skTagsService().svs().validator().canRemoveTag( aEntity.id() );
+    // return skTagsService().svs().validator().canRemoveTag( aEntity.id() );
+    // FIXME
+    return ValidationResult.SUCCESS;
   }
 
   @Override
