@@ -14,8 +14,8 @@ public interface ISkidePluginTagsConstants {
   // ------------------------------------------------------------------------------------
   // Icons
 
-  String PREFIX_OF_ICON_FIELD_NAME = "ICONID_";      //$NON-NLS-1$
-  String ICONID_SKIDE_PLUGIN       = "skide-plugin"; //$NON-NLS-1$
+  String PREFIX_OF_ICON_FIELD_NAME = "ICONID_";            //$NON-NLS-1$
+  String ICONID_SKIDE_TAGS_EDITOR  = "app-yarliks-editor"; //$NON-NLS-1$
 
   /**
    * Constants registration.
@@ -24,8 +24,7 @@ public interface ISkidePluginTagsConstants {
    */
   static void init( IEclipseContext aWinContext ) {
     ITsIconManager iconManager = aWinContext.get( ITsIconManager.class );
-    iconManager.registerStdIconByIds( Activator.PLUGIN_ID, ISkidePluginTagsConstants.class,
-        PREFIX_OF_ICON_FIELD_NAME );
+    iconManager.registerStdIconByIds( Activator.PLUGIN_ID, ISkidePluginTagsConstants.class, PREFIX_OF_ICON_FIELD_NAME );
     //
   }
 

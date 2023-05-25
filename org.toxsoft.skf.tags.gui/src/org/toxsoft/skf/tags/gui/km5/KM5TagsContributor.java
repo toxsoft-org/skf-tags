@@ -39,7 +39,7 @@ public class KM5TagsContributor
 
   @Override
   protected IStringList papiCreateModels() {
-    m5().addModel( new GwidM5Model() );
+    m5().addModel( new GwidM5Model( skConn() ) );
     m5().addModel( new SkTagSectionM5Model( skConn() ) );
     m5().addModel( new SkTagM5Model( skConn() ) );
 

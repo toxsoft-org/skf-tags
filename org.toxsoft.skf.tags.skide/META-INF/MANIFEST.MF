@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: SkiDE plugin: Template Eclipse project for developers
-Bundle-SymbolicName: org.toxsoft.skide.plugin.template;singleton:=true
+Bundle-Name: SkiDE plugin: Tags editor
+Bundle-SymbolicName: org.toxsoft.skf.tags.skide;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.toxsoft.skf.tags.skide.Activator
 Bundle-Vendor: toxsoft.org
@@ -26,5 +26,5 @@ Require-Bundle: javax.annotation,
  org.toxsoft.skide.core,
  org.toxsoft.skf.tags.gui
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Automatic-Module-Name: org.toxsoft.skide.plugin.template
+Automatic-Module-Name: org.toxsoft.skf.tags.skide
 Bundle-ActivationPolicy: lazy

@@ -1,7 +1,5 @@
 package org.toxsoft.skf.tags.gui.panels;
 
-import org.eclipse.swt.*;
-import org.eclipse.swt.custom.*;
 import org.eclipse.swt.widgets.*;
 import org.toxsoft.core.tsgui.bricks.ctx.*;
 import org.toxsoft.core.tsgui.bricks.ctx.impl.*;
@@ -9,7 +7,6 @@ import org.toxsoft.core.tsgui.m5.*;
 import org.toxsoft.core.tsgui.m5.gui.panels.*;
 import org.toxsoft.core.tsgui.m5.model.*;
 import org.toxsoft.core.tslib.bricks.strid.more.*;
-import org.toxsoft.core.tslib.gw.gwid.*;
 import org.toxsoft.skf.tags.gui.km5.*;
 import org.toxsoft.skf.tags.lib.*;
 import org.toxsoft.uskat.core.connection.*;
@@ -31,7 +28,7 @@ public class PanelTagsEditor
     extends AbstractSkLazyPanel {
 
   private final IM5CollectionPanel<ISkTag> tagsEditorPane;
-  private final IM5CollectionPanel<Gwid>   gwidListEditorPane;
+  // private final IM5CollectionPanel<Gwid> gwidListEditorPane;
 
   /**
    * Constrcutor.
@@ -51,11 +48,11 @@ public class PanelTagsEditor
     tagsEditorPane = skTagM5Model.panelCreator().createCollEditPanel( tgCtx, tagLm.itemsProvider(), tagLm );
 
     // right pane
-    IM5Model<Gwid> gwidM5Model = m5().getModel( GwidM5Model.MODEL_ID, Gwid.class );
-    IM5LifecycleManager<Gwid> gwdListLm = gwidM5Model.getLifecycleManager( skConn() );
-    ITsGuiContext gwidCtx = new TsGuiContext( tsContext() );
-    gwidListEditorPane =
-        gwidM5Model.panelCreator().createCollEditPanel( gwidCtx, gwdListLm.itemsProvider(), gwdListLm );
+    // IM5Model<Gwid> gwidM5Model = m5().getModel( GwidM5Model.MODEL_ID, Gwid.class );
+    // IM5LifecycleManager<Gwid> gwdListLm = gwidM5Model.getLifecycleManager( skConn() );
+    // ITsGuiContext gwidCtx = new TsGuiContext( tsContext() );
+    // gwidListEditorPane =
+    // gwidM5Model.panelCreator().createCollEditPanel( gwidCtx, gwdListLm.itemsProvider(), gwdListLm );
 
   }
 
@@ -67,13 +64,13 @@ public class PanelTagsEditor
    * Handles selection change in the left panel {@link #tagsEditorPane}.
    */
   private void whenTagTreeSelectionChanges() {
-    ISkTag sel = tagsEditorPane.selectedItem();
-    if( sel != null ) {
-      gwidListEditorPane.setItemsProvider( () -> sel.getMarkedGwids() );
-    }
-    else {
-      gwidListEditorPane.setItemsProvider( GwidList::new );
-    }
+    // ISkTag sel = tagsEditorPane.selectedItem();
+    // if( sel != null ) {
+    // gwidListEditorPane.setItemsProvider( () -> sel.getMarkedGwids() );
+    // }
+    // else {
+    // gwidListEditorPane.setItemsProvider( GwidList::new );
+    // }
   }
 
   // ------------------------------------------------------------------------------------
@@ -82,13 +79,15 @@ public class PanelTagsEditor
 
   @Override
   protected void doInitGui( Composite aParent ) {
+    // пока просто одну панель
+    tagsEditorPane.createControl( aParent );
 
-    SashForm sfMain = new SashForm( aParent, SWT.HORIZONTAL );
-    tagsEditorPane.createControl( sfMain );
-    gwidListEditorPane.createControl( sfMain );
-    sfMain.setWeights( 3000, 7000 );
-    // setup
-    tagsEditorPane.addTsSelectionListener( ( s, i ) -> whenTagTreeSelectionChanges() );
+    // SashForm sfMain = new SashForm( aParent, SWT.HORIZONTAL );
+    // tagsEditorPane.createControl( sfMain );
+    // gwidListEditorPane.createControl( sfMain );
+    // sfMain.setWeights( 3000, 7000 );
+    // // setup
+    // tagsEditorPane.addTsSelectionListener( ( s, i ) -> whenTagTreeSelectionChanges() );
   }
 
 }

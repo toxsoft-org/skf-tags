@@ -15,7 +15,7 @@ public interface ISkidePluginTagsSharedResources {
   String STR_SKIDE_TEMPLATE_UNIT_2      = Messages.getString( "STR_SKIDE_TEMPLATE_UNIT_2" );   //$NON-NLS-1$
   String STR_SKIDE_TEMPLATE_UNIT_2_D    = Messages.getString( "STR_SKIDE_TEMPLATE_UNIT_2_D" ); //$NON-NLS-1$
 
-  String STR_SKIDE_TAGS_EDITOR   = "Tags editor";
-  String STR_SKIDE_TAGS_EDITOR_D = "SkIDE tags editor plug-in";
+  String STR_SKIDE_TAGS_EDITOR   = "Метки, редактор";
+  String STR_SKIDE_TAGS_EDITOR_D = "SkIDE plug-in редатора меток";
 
 }

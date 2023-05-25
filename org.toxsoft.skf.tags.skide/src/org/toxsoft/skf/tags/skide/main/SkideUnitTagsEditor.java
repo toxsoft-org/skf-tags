@@ -2,13 +2,13 @@ package org.toxsoft.skf.tags.skide.main;
 
 import static org.toxsoft.core.tsgui.bricks.actions.ITsStdActionDefs.*;
 import static org.toxsoft.core.tslib.av.metainfo.IAvMetaConstants.*;
+import static org.toxsoft.skf.tags.skide.ISkidePluginTagsConstants.*;
 import static org.toxsoft.skf.tags.skide.ISkidePluginTagsSharedResources.*;
-import static org.toxsoft.skide.core.ISkideCoreConstants.*;
 
 import org.toxsoft.core.tsgui.bricks.ctx.*;
 import org.toxsoft.core.tsgui.dialogs.*;
 import org.toxsoft.core.tslib.av.opset.impl.*;
-import org.toxsoft.skf.tags.gui.*;
+import org.toxsoft.skide.core.*;
 import org.toxsoft.skide.core.api.*;
 import org.toxsoft.skide.core.api.impl.*;
 
@@ -23,13 +23,13 @@ public class SkideUnitTagsEditor
   /**
    * The plugin ID.
    */
-  public static final String UNIT_ID = SKIDE_FULL_ID + ".unit.template_1"; //$NON-NLS-1$
+  public static final String UNIT_ID = ISkideCoreConstants.SKIDE_FULL_ID + ".unit.tags.editor"; //$NON-NLS-1$
 
   SkideUnitTagsEditor( ITsGuiContext aContext, AbstractSkidePlugin aCreator ) {
     super( UNIT_ID, OptionSetUtils.createOpSet( //
         TSID_NAME, STR_SKIDE_TAGS_EDITOR, //
         TSID_DESCRIPTION, STR_SKIDE_TAGS_EDITOR_D, //
-        TSID_ICON_ID, ISkTagsGuiConstants.ICONID_TAG_PLANT //
+        TSID_ICON_ID, ICONID_SKIDE_TAGS_EDITOR //
     ), aContext, aCreator );
     unitActions().add( ACDEF_ABOUT );
   }

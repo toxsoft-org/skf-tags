@@ -25,6 +25,8 @@ import org.toxsoft.uskat.core.*;
 import org.toxsoft.uskat.core.connection.*;
 import org.toxsoft.uskat.core.gui.km5.*;
 
+import ru.toxsoft.skt.vetrol.ws.core.templates.gui.valed.*;
+
 /**
  * M5-model of {@link ISkTag}.
  *
@@ -49,8 +51,7 @@ public class SkTagM5Model
   public static final String FID_MARKED_GWIDS = "markedGwids"; //$NON-NLS-1$
 
   /**
-   * Структура для описания поля типа списка Gwid которые хранятся ВМЕСТЕ с сущностью. Ключевое отличие от связи с
-   * объектами в том что по связи объекты хранятся отдельно от сущности.
+   * Clob {@link ISkTag#getMarkedGwids() }
    */
   public final IM5MultiModownFieldDef<ISkTag, Gwid> MARKED_GWIDS =
       new M5MultiModownFieldDef<>( FID_MARKED_GWIDS, GwidM5Model.MODEL_ID ) {
@@ -61,6 +62,10 @@ public class SkTagM5Model
           // TODO
           // params().setStr( TSID_ICON_ID, ICONID_SDED_CLASS_DATA );
           setFlags( M5FF_DETAIL );
+          // установим редактор
+          setValedEditor( ValedAvValobjGwidEditor.FACTORY_NAME );
+          // установим кипер
+          params().setStr( TSID_KEEPER_ID, Gwid.KEEPER_ID );
         }
 
         protected IList<Gwid> doGetFieldValue( ISkTag aEntity ) {
@@ -107,7 +112,7 @@ public class SkTagM5Model
     @Override
     protected void doInit() {
       setNameAndDescription( STR_N_ROOT, STR_D_ROOT );
-      setFlags( M5FF_INVARIANT | M5FF_DETAIL );
+      setFlags( M5FF_INVARIANT );
       setLookupProvider( () -> {
         ISkTagService tagService = coreApi().getService( ISkTagService.SERVICE_ID );
         // По всем секциям
@@ -199,7 +204,7 @@ public class SkTagM5Model
     @Override
     protected void doInit() {
       setNameAndDescription( STR_N_PARENT, STR_D_PARENT );
-      setFlags( M5FF_INVARIANT | M5FF_DETAIL );
+      setFlags( M5FF_INVARIANT );
       setLookupProvider( () -> {
         ISkTagService tagService = coreApi().getService( ISkTagService.SERVICE_ID );
         // По всем секциям
@@ -245,7 +250,7 @@ public class SkTagM5Model
         @Override
         protected void doInit() {
           setNameAndDescription( STR_N_PARENT, STR_D_PARENT );
-          setFlags( M5FF_INVARIANT | M5FF_DETAIL );
+          setFlags( M5FF_INVARIANT );
           setLookupProvider( () -> {
             ISkTagService tagService = coreApi().getService( ISkTagService.SERVICE_ID );
             return tagService.sections();

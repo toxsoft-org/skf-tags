@@ -1,5 +1,7 @@
 package org.toxsoft.skf.tags.skide.main;
 
+import static org.toxsoft.skf.tags.skide.ISkidePluginTagsSharedResources.*;
+
 import org.eclipse.swt.*;
 import org.eclipse.swt.widgets.*;
 import org.toxsoft.core.tsgui.bricks.ctx.*;
@@ -33,8 +35,8 @@ class SkideUnitPanelTagsEditor
     TabItem tiTagsEditor = new TabItem( tabFolder, SWT.NONE );
     PanelTagsEditor panelTagsEditor = new PanelTagsEditor( tsContext(), null );
     tiTagsEditor.setControl( panelTagsEditor.createControl( tabFolder ) );
-    tiTagsEditor.setText( "Ярлыки" );
-    tiTagsEditor.setToolTipText( "Редактор ярлыков" );
+    tiTagsEditor.setText( STR_SKIDE_TAGS_EDITOR );
+    tiTagsEditor.setToolTipText( STR_SKIDE_TAGS_EDITOR_D );
     tiTagsEditor.setImage( iconManager().loadStdIcon( ISkTagsGuiConstants.ICONID_TAG_PLANT, tabIconSize ) );
     return backPanel;
   }
