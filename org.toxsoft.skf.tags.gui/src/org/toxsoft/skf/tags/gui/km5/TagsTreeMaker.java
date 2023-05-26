@@ -41,6 +41,8 @@ public class TagsTreeMaker
   private final ISkTagService                         tagService;
   private final IStringMapEdit<DefaultTsNode<ISkTag>> allNodes = new StringMap<>();
 
+  static final String TMID_GROUP_BY_SECTION = "GroupBySection"; //$NON-NLS-1$
+
   /**
    * @param aTagService сервис меток
    */

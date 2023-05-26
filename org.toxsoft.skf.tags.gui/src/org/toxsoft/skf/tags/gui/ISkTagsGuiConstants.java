@@ -33,7 +33,7 @@ public interface ISkTagsGuiConstants {
 
   String ACTID_COPY_TAG = SK_ID + ".tags.gui.copy.tag"; //$NON-NLS-1$
 
-  TsActionDef ACDEF_COPY_TAG = TsActionDef.ofPush2( ACTID_CREATE_FOLDER, //
+  TsActionDef ACDEF_COPY_TAG = TsActionDef.ofPush2( ACTID_COPY_TAG, //
       STR_N_COPY_TAG, STR_D_COPY_TAG, ITsStdIconIds.ICONID_EDIT_COPY );
 
   String ACTID_SELECT_MULTY_GWIDS = SK_ID + ".tags.gui.select.gwids"; //$NON-NLS-1$

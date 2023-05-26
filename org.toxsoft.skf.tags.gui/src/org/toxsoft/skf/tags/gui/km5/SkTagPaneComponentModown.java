@@ -2,10 +2,12 @@ package org.toxsoft.skf.tags.gui.km5;
 
 import static org.toxsoft.core.tsgui.bricks.actions.ITsStdActionDefs.*;
 import static org.toxsoft.skf.tags.gui.ISkTagsGuiConstants.*;
+import static org.toxsoft.skf.tags.gui.ISkTagsGuiSharedResources.*;
 
 import org.toxsoft.core.tsgui.bricks.actions.*;
 import org.toxsoft.core.tsgui.bricks.ctx.*;
 import org.toxsoft.core.tsgui.bricks.stdevents.*;
+import org.toxsoft.core.tsgui.bricks.tstree.tmm.*;
 import org.toxsoft.core.tsgui.dialogs.datarec.*;
 import org.toxsoft.core.tsgui.graphics.icons.*;
 import org.toxsoft.core.tsgui.m5.*;
@@ -36,7 +38,16 @@ public class SkTagPaneComponentModown
   SkTagPaneComponentModown( ITsGuiContext aContext, IM5Model<ISkTag> aModel, IM5ItemsProvider<ISkTag> aItemsProvider,
       IM5LifecycleManager<ISkTag> aLifecycleManager ) {
     super( aContext, aModel, aItemsProvider, aLifecycleManager );
+
     addTsSelectionListener( this );
+    // установим панели деревопостроитель
+    TagsTreeMaker treeMaker = new TagsTreeMaker( connection().coreApi().getService( ISkTagService.SERVICE_ID ) );
+    tree().setTreeMaker( treeMaker );
+
+    // установим текущий режим просмотра "дерево меток по секциям"
+    treeModeManager().addTreeMode( new TreeModeInfo<>( TagsTreeMaker.TMID_GROUP_BY_SECTION, STR_N_TMID_GROUP_BY_SECTION,
+        STR_D_TMID_GROUP_BY_SECTION, null, treeMaker ) );
+    treeModeManager().setCurrentMode( TagsTreeMaker.TMID_GROUP_BY_SECTION );
 
   }
 

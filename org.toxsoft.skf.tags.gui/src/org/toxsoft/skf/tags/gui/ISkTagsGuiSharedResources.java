@@ -58,4 +58,10 @@ public interface ISkTagsGuiSharedResources {
   String STR_N_SECTION_ID  = "section id";
   String STR_D_SECTION_ID  = "section id";
 
+  /**
+   * {@link TagsTreeMaker }
+   */
+  String STR_N_TMID_GROUP_BY_SECTION = "по секциям";
+  String STR_D_TMID_GROUP_BY_SECTION = "Группировать по секциям меток";
+
 }
