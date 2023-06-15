@@ -20,12 +20,11 @@ import org.toxsoft.core.tslib.bricks.strid.coll.impl.*;
 import org.toxsoft.core.tslib.coll.*;
 import org.toxsoft.core.tslib.gw.gwid.*;
 import org.toxsoft.core.tslib.utils.errors.*;
+import org.toxsoft.skf.reports.gui.panels.valed.ValedAvValobjGwidEditor;
 import org.toxsoft.skf.tags.lib.*;
 import org.toxsoft.uskat.core.*;
 import org.toxsoft.uskat.core.connection.*;
 import org.toxsoft.uskat.core.gui.km5.*;
-
-import ru.toxsoft.skt.vetrol.ws.core.templates.gui.valed.*;
 
 /**
  * M5-model of {@link ISkTag}.

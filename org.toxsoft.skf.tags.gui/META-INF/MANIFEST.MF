@@ -21,7 +21,7 @@ Require-Bundle: javax.inject,
  org.toxsoft.uskat.core,
  org.toxsoft.uskat.core.gui,
  org.toxsoft.skf.tags.lib;bundle-version="1.0.0",
- ru.toxsoft.skt.vetrol.ws.core
+ org.toxsoft.skf.reports.gui
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Automatic-Module-Name: org.toxsoft.skf.tags.gui
 Bundle-ActivationPolicy: lazy

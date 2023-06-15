@@ -20,11 +20,10 @@ import org.toxsoft.core.tslib.av.impl.*;
 import org.toxsoft.core.tslib.coll.*;
 import org.toxsoft.core.tslib.gw.gwid.*;
 import org.toxsoft.core.tslib.utils.errors.*;
+import org.toxsoft.skf.reports.gui.panels.*;
 import org.toxsoft.skf.tags.lib.*;
 import org.toxsoft.uskat.core.connection.*;
 import org.toxsoft.uskat.core.gui.conn.*;
-
-import ru.toxsoft.skt.vetrol.ws.core.templates.gui.*;
 
 /**
  * Панель просмотра/редактирования ISkTag
