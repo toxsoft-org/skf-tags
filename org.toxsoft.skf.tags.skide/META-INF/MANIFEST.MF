@@ -8,8 +8,8 @@ Bundle-Vendor: toxsoft.org
 Export-Package: org.toxsoft.skf.tags.skide,
  org.toxsoft.skf.tags.skide.e4.addons,
  org.toxsoft.skf.tags.skide.main
-Require-Bundle: javax.annotation,
- javax.inject,
+Require-Bundle: jakarta.inject.jakarta.inject-api,
+ jakarta.annotation-api,
  org.eclipse.core.runtime,
  org.eclipse.ui,
  org.eclipse.e4.core.contexts,
@@ -25,6 +25,6 @@ Require-Bundle: javax.annotation,
  org.toxsoft.uskat.core.gui,
  org.toxsoft.skide.core,
  org.toxsoft.skf.tags.gui
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Automatic-Module-Name: org.toxsoft.skf.tags.skide
 Bundle-ActivationPolicy: lazy

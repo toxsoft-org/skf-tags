@@ -4,8 +4,8 @@ Bundle-Name: Gui
 Bundle-SymbolicName: org.toxsoft.skf.tags.gui
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.toxsoft.skf.tags.gui.Activator
-Require-Bundle: javax.inject,
- javax.annotation,
+Require-Bundle: jakarta.inject.jakarta.inject-api,
+ jakarta.annotation-api,
  org.eclipse.core.runtime,
  org.eclipse.ui;resolution:=optional,
  org.eclipse.rap.ui;resolution:=optional,
@@ -22,7 +22,7 @@ Require-Bundle: javax.inject,
  org.toxsoft.uskat.core.gui,
  org.toxsoft.skf.tags.lib;bundle-version="1.0.0",
  org.toxsoft.skf.reports.gui
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Automatic-Module-Name: org.toxsoft.skf.tags.gui
 Bundle-ActivationPolicy: lazy
 Export-Package: org.toxsoft.skf.tags.gui,
