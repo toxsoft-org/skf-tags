@@ -1,4 +1,4 @@
-package org.toxsoft.skf.tags.lib;
+package org.toxsoft.skf.tags.lib_old_2;
 
 import org.toxsoft.core.tslib.coll.helpers.*;
 
@@ -12,7 +12,7 @@ public interface ISkTagServiceListener {
   /**
    * Called when some changes in sections list occurs.
    * <p>
-   * The event {@link ECrudOp#EDIT} occurs only when section parameters {@link ISkTagSection#attrs()} changes, not on
+   * The event {@link ECrudOp#EDIT} occurs only when section parameters {@link ISkTagSection#params()} changes, not on
    * tags change. For tag change listen to the {@link #onTagChanged(ISkTagService, ISkTagSection, ECrudOp, String)}.
    *
    * @param aSource {@link ISkTagService} - the event source manager

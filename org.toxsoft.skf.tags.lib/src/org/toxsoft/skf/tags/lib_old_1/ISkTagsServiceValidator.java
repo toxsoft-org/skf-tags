@@ -1,4 +1,4 @@
-package org.toxsoft.skf.tags.lib_old;
+package org.toxsoft.skf.tags.lib_old_1;
 
 import org.toxsoft.core.tslib.av.opset.*;
 import org.toxsoft.core.tslib.bricks.validator.*;

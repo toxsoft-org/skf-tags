@@ -1,4 +1,4 @@
-package org.toxsoft.skf.tags.lib_old.impl;
+package org.toxsoft.skf.tags.lib_old_1.impl;
 
 import org.toxsoft.core.tslib.av.opset.*;
 import org.toxsoft.core.tslib.bricks.ctx.*;

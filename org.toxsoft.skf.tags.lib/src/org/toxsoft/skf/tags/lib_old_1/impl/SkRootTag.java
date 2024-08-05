@@ -1,7 +1,7 @@
-package org.toxsoft.skf.tags.lib_old.impl;
+package org.toxsoft.skf.tags.lib_old_1.impl;
 
 import org.toxsoft.core.tslib.gw.skid.*;
-import org.toxsoft.skf.tags.lib_old.*;
+import org.toxsoft.skf.tags.lib_old_1.*;
 import org.toxsoft.uskat.core.api.objserv.*;
 
 class SkRootTag

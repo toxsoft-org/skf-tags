@@ -1,4 +1,4 @@
-package org.toxsoft.skf.tags.lib;
+package org.toxsoft.skf.tags.lib_old_2;
 
 import org.toxsoft.core.tslib.av.opset.*;
 import org.toxsoft.core.tslib.bricks.events.*;
@@ -11,6 +11,10 @@ import org.toxsoft.uskat.core.api.*;
 
 /**
  * Manages the tree-like hierarchy of a tags - something that can be used for any entities marking.
+ * <p>
+ * The tree view of tags is provided by the format of IDpaths - identifiers {@link ISkTag#id()}. Child tags add the
+ * local IDname identifier {@link ISkTag#localId()} to the IDpath identifier of the parent. The root tag is a special
+ * tag {@link ISkTagSection#root()}, whose identifier is an empty string.
  *
  * @author hazard157
  */
@@ -42,23 +46,23 @@ public interface ISkTagService
    * Creates the section.
    *
    * @param aSectionId String - the section ID
-   * @param aAttrs {@link IOptionSet} - attributes values
+   * @param aParams {@link IOptionSet} - parameters values
    * @return {@link ISkTagSection} - created section
    * @throws TsNullArgumentRtException any argument = <code>null</code>
    * @throws TsValidationFailedRtException validation failed
    */
-  ISkTagSection createSection( String aSectionId, IOptionSet aAttrs );
+  ISkTagSection createSection( String aSectionId, IOptionSet aParams );
 
   /**
-   * Changes the section attributes.
+   * Changes the section parameters.
    *
    * @param aSectionId String - the section ID
-   * @param aAttrs {@link IOptionSet} - set of the attributes to be changed, may be empty
+   * @param aParams {@link IOptionSet} - set of the parameters to be changed, may be empty
    * @return {@link ISkTagSection} - the changed section
    * @throws TsNullArgumentRtException any argument = <code>null</code>
    * @throws TsValidationFailedRtException validation failed
    */
-  ISkTagSection editSection( String aSectionId, IOptionSet aAttrs );
+  ISkTagSection editSection( String aSectionId, IOptionSet aParams );
 
   /**
    * Removes the section.
@@ -68,6 +72,13 @@ public interface ISkTagService
    * @throws TsValidationFailedRtException validation failed
    */
   void removeSection( String aSectionId );
+
+  /**
+   * Removes all sections.
+   * <p>
+   * Warning: clearing the whole tag manager is the special operation that does <b>not</b> performs any check!
+   */
+  void clear();
 
   // ------------------------------------------------------------------------------------
   // Service support

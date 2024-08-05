@@ -1,8 +1,8 @@
-package org.toxsoft.skf.tags.lib;
+package org.toxsoft.skf.tags.lib_old_2;
 
 import static org.toxsoft.core.tslib.av.impl.AvUtils.*;
 import static org.toxsoft.core.tslib.av.metainfo.IAvMetaConstants.*;
-import static org.toxsoft.skf.tags.lib.ISkTagServiceSharedResources.*;
+import static org.toxsoft.skf.tags.lib_old_2.ISkTagServiceSharedResources.*;
 import static org.toxsoft.uskat.core.ISkHardConstants.*;
 
 import org.toxsoft.core.tslib.av.opset.*;
@@ -22,17 +22,17 @@ public interface ISkTagServiceHardConstants {
   /**
    * Identifier prefix of all classes owned by this service.
    */
-  String CLSID_PREFIX = SK_ID + ".TagService"; //$NON-NLS-1$
+  String CLSID_PREFIX = SK_ID + ".TagManager.class"; //$NON-NLS-1$
 
   /**
-   * Tag section {@link ISkTagSection} class ID.
+   * Tag section class ID.
    */
-  String CLSID_TAG_SECTION = CLSID_PREFIX + ".Section"; //$NON-NLS-1$
+  String CLSID_TAG_SECTION = CLSID_PREFIX + ".TagSection"; //$NON-NLS-1$
 
   /**
-   * Tag {@link ISkTag} class ID.
+   * {@link ISkTag} implementation base class ID.
    */
-  String CLSID_TAG = CLSID_PREFIX + ".Tag"; //$NON-NLS-1$
+  String CLSID_TAG_BASE = CLSID_PREFIX + ".TagBase"; //$NON-NLS-1$
 
   /**
    * ID of the attribute {@link #ATRINF_TAG_KIND}.
@@ -73,7 +73,7 @@ public interface ISkTagServiceHardConstants {
    * Definition of the link to the tags contained in the section.
    */
   IDtoLinkInfo LNKINF_SECTION_TAGS = DtoLinkInfo.create2( LNKID_SECTION_TAGS, //
-      new SingleStringList( CLSID_TAG ), //
+      new SingleStringList( CLSID_TAG_BASE ), //
       CollConstraint.NONE, //
       TSID_NAME, STR_LINK_SECTION_TAGS, //
       TSID_DESCRIPTION, STR_LINK_SECTION_TAGS_D //

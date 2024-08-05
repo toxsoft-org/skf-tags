@@ -1,4 +1,4 @@
-package org.toxsoft.skf.tags.lib_old.impl;
+package org.toxsoft.skf.tags.lib_old_1.impl;
 
 import static org.toxsoft.core.tslib.av.metainfo.IAvMetaConstants.*;
 import static org.toxsoft.skf.tags.lib.impl.ISkTagServiceConstants.*;

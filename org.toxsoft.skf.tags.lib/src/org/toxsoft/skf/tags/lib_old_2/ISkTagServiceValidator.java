@@ -1,4 +1,4 @@
-package org.toxsoft.skf.tags.lib;
+package org.toxsoft.skf.tags.lib_old_2;
 
 import org.toxsoft.core.tslib.av.opset.*;
 import org.toxsoft.core.tslib.bricks.validator.*;
@@ -54,11 +54,13 @@ public interface ISkTagServiceValidator {
 
   /**
    * Checks that the tag can be edited.
+   * <p>
+   * Note: <code>aParams</code> will replace previous set in {@link ISkTag#params()}.
    *
    * @param aSection {@link ISkTagSection} - the tags section of an operation
    * @param aTagId String - the tag ID
    * @param aNewKind {@link ESkTagKind} - the new kind of the tag
-   * @param aParams {@link IOptionSet} - the new values for {@link ISkTag#attrs()}
+   * @param aParams {@link IOptionSet} - the new values for {@link ISkTag#params()}
    * @return {@link ValidationResult} - the check result
    * @throws TsNullArgumentRtException any argument = <code>null</code>
    */
