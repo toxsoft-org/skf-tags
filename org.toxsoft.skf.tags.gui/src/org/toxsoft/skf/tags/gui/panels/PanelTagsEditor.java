@@ -8,7 +8,7 @@ import org.toxsoft.core.tsgui.m5.gui.panels.*;
 import org.toxsoft.core.tsgui.m5.model.*;
 import org.toxsoft.core.tslib.bricks.strid.more.*;
 import org.toxsoft.skf.tags.gui.km5.*;
-import org.toxsoft.skf.tags.lib.*;
+import org.toxsoft.skf.tags.lib_old_4.*;
 import org.toxsoft.uskat.core.connection.*;
 import org.toxsoft.uskat.core.gui.conn.*;
 import org.toxsoft.uskat.core.gui.glib.*;

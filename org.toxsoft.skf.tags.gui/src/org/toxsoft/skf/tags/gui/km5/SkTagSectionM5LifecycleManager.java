@@ -1,6 +1,6 @@
 package org.toxsoft.skf.tags.gui.km5;
 
-import static org.toxsoft.skf.tags.lib.ISkTagServiceHardConstants.*;
+import static org.toxsoft.skf.tags.lib_old_4.ISkTagServiceHardConstants.*;
 import static org.toxsoft.uskat.core.ISkHardConstants.*;
 
 import org.toxsoft.core.tsgui.m5.*;
@@ -11,7 +11,7 @@ import org.toxsoft.core.tslib.bricks.validator.*;
 import org.toxsoft.core.tslib.coll.*;
 import org.toxsoft.core.tslib.gw.skid.*;
 import org.toxsoft.core.tslib.utils.errors.*;
-import org.toxsoft.skf.tags.lib.*;
+import org.toxsoft.skf.tags.lib_old_4.*;
 import org.toxsoft.uskat.core.connection.*;
 
 /**

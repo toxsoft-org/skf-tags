@@ -1,8 +1,8 @@
-package org.toxsoft.skf.tags.lib;
+package org.toxsoft.skf.tags.lib_old_4;
 
 import static org.toxsoft.core.tslib.av.impl.AvUtils.*;
 import static org.toxsoft.core.tslib.av.metainfo.IAvMetaConstants.*;
-import static org.toxsoft.skf.tags.lib.ISkTagServiceSharedResources.*;
+import static org.toxsoft.skf.tags.lib_old_4.ISkTagServiceSharedResources.*;
 import static org.toxsoft.uskat.core.ISkHardConstants.*;
 
 import org.toxsoft.core.tslib.av.opset.*;

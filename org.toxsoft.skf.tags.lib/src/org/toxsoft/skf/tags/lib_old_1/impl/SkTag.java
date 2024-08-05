@@ -1,7 +1,7 @@
 package org.toxsoft.skf.tags.lib_old_1.impl;
 
 import static org.toxsoft.core.tslib.av.metainfo.IAvMetaConstants.*;
-import static org.toxsoft.skf.tags.lib.impl.ISkTagServiceConstants.*;
+import static org.toxsoft.skf.tags.lib_old_1.impl.ISkTagServiceConstants.*;
 
 import org.toxsoft.core.tslib.av.opset.*;
 import org.toxsoft.core.tslib.av.opset.impl.*;
@@ -11,7 +11,7 @@ import org.toxsoft.core.tslib.bricks.strid.impl.*;
 import org.toxsoft.core.tslib.coll.*;
 import org.toxsoft.core.tslib.gw.gwid.*;
 import org.toxsoft.core.tslib.gw.skid.*;
-import org.toxsoft.skf.tags.lib.*;
+import org.toxsoft.skf.tags.lib_old_1.*;
 import org.toxsoft.uskat.core.api.objserv.*;
 import org.toxsoft.uskat.core.impl.*;
 

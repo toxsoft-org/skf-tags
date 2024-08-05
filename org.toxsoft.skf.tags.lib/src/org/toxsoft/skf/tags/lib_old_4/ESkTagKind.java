@@ -1,6 +1,6 @@
-package org.toxsoft.skf.tags.lib;
+package org.toxsoft.skf.tags.lib_old_4;
 
-import static org.toxsoft.skf.tags.lib.ISkTagServiceSharedResources.*;
+import static org.toxsoft.skf.tags.lib_old_4.ISkTagServiceSharedResources.*;
 
 import org.toxsoft.core.tslib.bricks.keeper.*;
 import org.toxsoft.core.tslib.bricks.keeper.std.*;

@@ -1,4 +1,4 @@
-package org.toxsoft.skf.tags.lib;
+package org.toxsoft.skf.tags.lib_old_4;
 
 import org.toxsoft.core.tslib.bricks.strid.coll.*;
 import org.toxsoft.core.tslib.gw.gwid.*;

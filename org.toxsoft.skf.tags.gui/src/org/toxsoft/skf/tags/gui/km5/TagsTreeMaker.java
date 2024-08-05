@@ -12,7 +12,7 @@ import org.toxsoft.core.tslib.coll.*;
 import org.toxsoft.core.tslib.coll.impl.*;
 import org.toxsoft.core.tslib.coll.primtypes.*;
 import org.toxsoft.core.tslib.coll.primtypes.impl.*;
-import org.toxsoft.skf.tags.lib.*;
+import org.toxsoft.skf.tags.lib_old_4.*;
 
 /**
  * Построитель полного дерева меток системы.

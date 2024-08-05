@@ -21,7 +21,7 @@ import org.toxsoft.core.tslib.coll.*;
 import org.toxsoft.core.tslib.gw.gwid.*;
 import org.toxsoft.core.tslib.utils.errors.*;
 import org.toxsoft.skf.reports.gui.panels.valed.ValedAvValobjGwidEditor;
-import org.toxsoft.skf.tags.lib.*;
+import org.toxsoft.skf.tags.lib_old_4.*;
 import org.toxsoft.uskat.core.*;
 import org.toxsoft.uskat.core.connection.*;
 import org.toxsoft.uskat.core.gui.km5.*;
