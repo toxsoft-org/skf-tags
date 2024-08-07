@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: USkat package: Tags. SkService library
 Bundle-SymbolicName: org.toxsoft.skf.tags.lib
 Bundle-Version: 1.0.0.qualifier
-Export-Package: org.toxsoft.skf.tags.lib_old_4
+Export-Package: org.toxsoft.skf.tags.lib
 Automatic-Module-Name: org.toxsoft.skf.tags.lib
 Bundle-RequiredExecutionEnvironment: JavaSE-21
 Bundle-Vendor: toxsoft.org

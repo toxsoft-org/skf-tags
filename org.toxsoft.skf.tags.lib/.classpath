@@ -6,6 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
-	<classpathentry excluding="org/toxsoft/skf/tags/lib_old/" kind="src" path="src"/>
+	<classpathentry excluding="org/toxsoft/skf/tags/lib_old/|org/toxsoft/skf/tags/lib_old_1/|org/toxsoft/skf/tags/lib_old_2/|org/toxsoft/skf/tags/lib_old_3/|org/toxsoft/skf/tags/lib_old_4/" kind="src" path="src"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
