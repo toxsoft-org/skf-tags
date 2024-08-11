@@ -1,6 +1,5 @@
 package org.toxsoft.skf.tags.lib;
 
-import org.toxsoft.core.tslib.av.opset.*;
 import org.toxsoft.core.tslib.bricks.events.*;
 import org.toxsoft.core.tslib.bricks.strid.coll.*;
 import org.toxsoft.core.tslib.bricks.validator.*;
@@ -22,8 +21,15 @@ public interface ISkTagService
    */
   String SERVICE_ID = ISkHardConstants.SK_SYSEXT_SERVICE_ID_PREFIX + ".Tags"; //$NON-NLS-1$
 
-  // ------------------------------------------------------------------------------------
-  // Tags
+  /**
+   * Returns tag by ID if any found.
+   * <p>
+   * This is the same as to check ID existence in the keys of the list {@link #listTags()}.
+   *
+   * @param aTagId String - the tag ID
+   * @return {@link ISkTagGroup} - the tag or <code>null</code> if tag with the specified ID
+   */
+  ISkTag findTag( String aTagId );
 
   /**
    * Returns all tags.
@@ -37,13 +43,12 @@ public interface ISkTagService
    * <p>
    * When editing, <code>aParams</code> may contain only subset of the options.
    *
-   * @param aTagId String - the tag ID (IDpath)
-   * @param aParams {@link IOptionSet} - {@link ISkTag#params()} values
+   * @param aTagInfo {@link IDtoTagInfo} - the ID and properties of the tag to create/edit
    * @return {@link ISkTag} - created/edited tag
    * @throws TsNullArgumentRtException any argument = <code>null</code>
    * @throws TsValidationFailedRtException validation by {@link #svs()} failed
    */
-  ISkTag defineTag( String aTagId, IOptionSet aParams );
+  ISkTag defineTag( IDtoTagInfo aTagInfo );
 
   /**
    * Removes the tag.
@@ -54,9 +59,6 @@ public interface ISkTagService
    */
   void removeTag( String aTagId );
 
-  // ------------------------------------------------------------------------------------
-  // Marking by tags
-
   /**
    * Returns the entities marking manager.
    *
@@ -64,37 +66,12 @@ public interface ISkTagService
    */
   ISkTagMarkManager markMan();
 
-  // ------------------------------------------------------------------------------------
-  // Bundles
-
   /**
-   * Returns all bundles of tags.
+   * Returns the tags hierarchical representation means.
    *
-   * @return {@link IStridablesList}&lt;{@link ISkTagBundle}&gt; - list of bundles
+   * @return {@link ISkTagGroupsManager} - the tags groups manager
    */
-  IStridablesList<ISkTagBundle> listBundles();
-
-  /**
-   * Defines (creates new or updates an existing) bundle.
-   * <p>
-   * When editing, <code>aParams</code> may contain only subset of the options.
-   *
-   * @param aBundleId String - the bundle ID (IDpath)
-   * @param aParams {@link IOptionSet} - {@link ISkTagBundle#params()} values
-   * @return {@link ISkTagBundle} - created/edited bundle
-   * @throws TsNullArgumentRtException any argument = <code>null</code>
-   * @throws TsValidationFailedRtException validation by {@link #svs()} failed
-   */
-  ISkTagBundle defineBundle( String aBundleId, IOptionSet aParams );
-
-  /**
-   * Removes the bundle.
-   *
-   * @param aBundleId String - ID of bundle to remove
-   * @throws TsNullArgumentRtException any argument = <code>null</code>
-   * @throws TsValidationFailedRtException validation by {@link #svs()} failed
-   */
-  void removeBundle( String aBundleId );
+  ISkTagGroupsManager groupMan();
 
   // ------------------------------------------------------------------------------------
   // Service support

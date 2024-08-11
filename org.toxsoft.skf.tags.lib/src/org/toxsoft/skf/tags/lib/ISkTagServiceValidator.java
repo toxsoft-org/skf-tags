@@ -1,6 +1,5 @@
 package org.toxsoft.skf.tags.lib;
 
-import org.toxsoft.core.tslib.av.opset.*;
 import org.toxsoft.core.tslib.bricks.validator.*;
 import org.toxsoft.core.tslib.utils.errors.*;
 
@@ -15,23 +14,22 @@ public interface ISkTagServiceValidator {
    * Checks that the tag can be created.
    *
    * @param aSource {@link ISkTagService} - the tag service
-   * @param aTagId String - the tag ID
-   * @param aParams {@link IOptionSet} - the tag parameter values
+   * @param aTagInfo {@link IDtoTagInfo} - the ID and properties of the tag to create
    * @return {@link ValidationResult} - the check result
    * @throws TsNullArgumentRtException any argument = <code>null</code>
    */
-  ValidationResult canCreateTag( ISkTagService aSource, String aTagId, IOptionSet aParams );
+  ValidationResult canCreateTag( ISkTagService aSource, IDtoTagInfo aTagInfo );
 
   /**
    * Checks that the tag can be edited.
    *
    * @param aSource {@link ISkTagService} - the tag service
-   * @param aTagId String - the tag ID
-   * @param aParams {@link IOptionSet} - the new tag properties
+   * @param aTag {@link ISkTag} - the tag to edit
+   * @param aTagInfo {@link IDtoTagInfo} - the ID and properties of the tag to edit
    * @return {@link ValidationResult} - the check result
    * @throws TsNullArgumentRtException any argument = <code>null</code>
    */
-  ValidationResult canEditTag( ISkTagService aSource, String aTagId, IOptionSet aParams );
+  ValidationResult canEditTag( ISkTagService aSource, ISkTag aTag, IDtoTagInfo aTagInfo );
 
   /**
    * Checks that the tag can be removed.
@@ -47,23 +45,22 @@ public interface ISkTagServiceValidator {
    * Checks if the bundle can be created.
    *
    * @param aSource {@link ISkTagService} - the tag service
-   * @param aBundleId String - the bundle ID
-   * @param aParams {@link IOptionSet} - parameters values
+   * @param aBundleInfo {@link IDtoTagInfo} - the ID and properties of the tag to create
    * @return {@link ValidationResult} - the check result
    * @throws TsNullArgumentRtException any argument = <code>null</code>
    */
-  ValidationResult canCreateBundle( ISkTagService aSource, String aBundleId, IOptionSet aParams );
+  ValidationResult canCreateBundle( ISkTagService aSource, IDtoTagInfo aBundleInfo );
 
   /**
    * Checks if the can be edited.
    *
    * @param aSource {@link ISkTagService} - the tag service
-   * @param aBundle {@link ISkTagBundle} - the bundle to edit
-   * @param aParams {@link IOptionSet} - set of the parameters to be changed, may be empty
+   * @param aBundle {@link ISkTagGroup} - the bundle to edit
+   * @param aBundleInfo {@link IDtoTagInfo} - the ID and properties of the tag to edit
    * @return {@link ValidationResult} - the check result
    * @throws TsNullArgumentRtException any argument = <code>null</code>
    */
-  ValidationResult canEditBundle( ISkTagService aSource, ISkTagBundle aBundle, IOptionSet aParams );
+  ValidationResult canEditBundle( ISkTagService aSource, ISkTagGroup aBundle, IDtoTagInfo aBundleInfo );
 
   /**
    * Checks if the bundle can be removed.
@@ -80,23 +77,22 @@ public interface ISkTagServiceValidator {
    *
    * @param aSource {@link ISkTagService} - the tag service
    * @param aParent {@link ISkTagGroup} - the parent group
-   * @param aGroupId String - the group ID
-   * @param aParams {@link IOptionSet} - parameters values
+   * @param aGroupInfo {@link IDtoTagInfo} - the ID and properties of the tag to create
    * @return {@link ValidationResult} - the check result
    * @throws TsNullArgumentRtException any argument = <code>null</code>
    */
-  ValidationResult canCreateGroup( ISkTagService aSource, ISkTagGroup aParent, String aGroupId, IOptionSet aParams );
+  ValidationResult canCreateGroup( ISkTagService aSource, ISkTagGroup aParent, IDtoTagInfo aGroupInfo );
 
   /**
    * Checks if the group can be edited.
    *
    * @param aSource {@link ISkTagService} - the tag service
    * @param aGroup {@link ISkTagGroup} - the group to edit
-   * @param aParams {@link IOptionSet} - set of the parameters to be changed, may be empty
+   * @param aGroupInfo {@link IDtoTagInfo} - the ID and properties of the tag to edit
    * @return {@link ValidationResult} - the check result
    * @throws TsNullArgumentRtException any argument = <code>null</code>
    */
-  ValidationResult canEditGroup( ISkTagService aSource, ISkTagGroup aGroup, IOptionSet aParams );
+  ValidationResult canEditGroup( ISkTagService aSource, ISkTagGroup aGroup, IDtoTagInfo aGroupInfo );
 
   /**
    * Checks if the group can be removed.

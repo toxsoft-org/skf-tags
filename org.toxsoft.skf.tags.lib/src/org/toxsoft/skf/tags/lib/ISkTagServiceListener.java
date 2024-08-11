@@ -13,7 +13,7 @@ public interface ISkTagServiceListener {
   /**
    * Called when changes in the bundles list occurs.
    * <p>
-   * Informs when bundle is created and removed, or when bundle parameters {@link ISkTagBundle#params()} has been
+   * Informs when bundle is created and removed, or when bundle parameters {@link ISkTagGroup#params()} has been
    * changed. Does <b>not</b> informs about changes in the bundle subtree of groups and tags.
    *
    * @param aSource {@link ISkTagService} - the event source manager
@@ -29,7 +29,7 @@ public interface ISkTagServiceListener {
    * Does <b>not</b> informs about changes in the child tags of the group.
    *
    * @param aSource {@link ISkTagService} - the event source manager
-   * @param aParent {@link ISkTagGroup} - the parent group (may be the bundle {@link ISkTagBundle})
+   * @param aParent {@link ISkTagGroup} - the parent group (may be the bundle {@link ISkTagGroupsManager#listBundles()})
    * @param aOp {@link ECrudOp} - what happened
    * @param aGroupId String - affected group ID or <code>null</code> for {@link ECrudOp#LIST}
    */
@@ -53,10 +53,9 @@ public interface ISkTagServiceListener {
    * Informs about changes in {@link ISkTagService#listTags()} list.
    *
    * @param aSource {@link ISkTagService} - the event source manager
-   * @param aGroup {@link ISkTagGroup} - the event source group
    * @param aOp {@link ECrudOp} - what happened
    * @param aTagId String - affected tag ID or <code>null</code> for {@link ECrudOp#LIST}
    */
-  void onTagChanged( ISkTagService aSource, ISkTagGroup aGroup, ECrudOp aOp, String aTagId );
+  void onTagChanged( ISkTagService aSource, ECrudOp aOp, String aTagId );
 
 }
