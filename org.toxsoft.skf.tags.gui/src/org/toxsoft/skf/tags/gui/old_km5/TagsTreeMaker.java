@@ -1,7 +1,7 @@
 /**
  *
  */
-package org.toxsoft.skf.tags.gui.km5;
+package org.toxsoft.skf.tags.gui.old_km5;
 
 import static org.toxsoft.skf.tags.gui.ISkTagsGuiConstants.*;
 
@@ -12,6 +12,7 @@ import org.toxsoft.core.tslib.coll.*;
 import org.toxsoft.core.tslib.coll.impl.*;
 import org.toxsoft.core.tslib.coll.primtypes.*;
 import org.toxsoft.core.tslib.coll.primtypes.impl.*;
+import org.toxsoft.skf.tags.lib.*;
 import org.toxsoft.skf.tags.lib_old_4.*;
 
 /**

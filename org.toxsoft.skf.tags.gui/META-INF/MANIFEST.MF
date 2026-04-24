@@ -20,7 +20,7 @@ Require-Bundle: jakarta.inject.jakarta.inject-api,
  org.toxsoft.core.tsgui,
  org.toxsoft.uskat.core,
  org.toxsoft.uskat.core.gui,
- org.toxsoft.skf.tags.lib;bundle-version="1.0.0",
+ org.toxsoft.skf.tags.lib,
  org.toxsoft.skf.reports.gui
 Bundle-RequiredExecutionEnvironment: JavaSE-21
 Automatic-Module-Name: org.toxsoft.skf.tags.gui

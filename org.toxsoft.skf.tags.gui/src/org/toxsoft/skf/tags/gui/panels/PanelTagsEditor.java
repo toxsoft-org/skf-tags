@@ -7,8 +7,7 @@ import org.toxsoft.core.tsgui.m5.*;
 import org.toxsoft.core.tsgui.m5.gui.panels.*;
 import org.toxsoft.core.tsgui.m5.model.*;
 import org.toxsoft.core.tslib.bricks.strid.more.*;
-import org.toxsoft.skf.tags.gui.km5.*;
-import org.toxsoft.skf.tags.lib_old_4.*;
+import org.toxsoft.skf.tags.lib.*;
 import org.toxsoft.uskat.core.connection.*;
 import org.toxsoft.uskat.core.gui.conn.*;
 import org.toxsoft.uskat.core.gui.glib.*;
@@ -42,7 +41,8 @@ public class PanelTagsEditor
   public PanelTagsEditor( ITsGuiContext aContext, IdChain aSuppliedConnectionId ) {
     super( aContext, aSuppliedConnectionId );
     // left pane
-    IM5Model<ISkTag> skTagM5Model = m5().getModel( SkTagM5Model.MODEL_ID, ISkTag.class );
+    IM5Model<ISkTag> skTagM5Model = m5().getModel( "SkTagM5Model.MODEL_ID", ISkTag.class );
+    // m5().getModel( SkTagM5Model.MODEL_ID, ISkTag.class );
     IM5LifecycleManager<ISkTag> tagLm = skTagM5Model.getLifecycleManager( skConn() );
     ITsGuiContext tgCtx = new TsGuiContext( tsContext() );
     tagsEditorPane = skTagM5Model.panelCreator().createCollEditPanel( tgCtx, tagLm.itemsProvider(), tagLm );

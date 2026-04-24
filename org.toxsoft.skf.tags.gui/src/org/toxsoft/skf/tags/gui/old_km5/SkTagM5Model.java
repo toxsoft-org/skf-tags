@@ -1,4 +1,4 @@
-package org.toxsoft.skf.tags.gui.km5;
+package org.toxsoft.skf.tags.gui.old_km5;
 
 import static org.toxsoft.core.tsgui.m5.IM5Constants.*;
 import static org.toxsoft.core.tslib.av.EAtomicType.*;
@@ -20,7 +20,9 @@ import org.toxsoft.core.tslib.bricks.strid.coll.impl.*;
 import org.toxsoft.core.tslib.coll.*;
 import org.toxsoft.core.tslib.gw.gwid.*;
 import org.toxsoft.core.tslib.utils.errors.*;
-import org.toxsoft.skf.reports.gui.panels.valed.ValedAvValobjGwidEditor;
+import org.toxsoft.skf.reports.gui.panels.valed.*;
+import org.toxsoft.skf.tags.gui.km5.*;
+import org.toxsoft.skf.tags.lib.*;
 import org.toxsoft.skf.tags.lib_old_4.*;
 import org.toxsoft.uskat.core.*;
 import org.toxsoft.uskat.core.connection.*;
